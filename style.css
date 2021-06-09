@@ -1,0 +1,58 @@
+.chrome-notification {
+    background-color: rgb(0 140 197 / 50%);
+    width: 250px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+    position: fixed !important;
+    bottom: 5px !important;
+    right: 5px !important;
+    padding: 0 15px;
+    border-radius: 15px;
+    -webkit-animation:fadeOut 1s;
+    -webkit-animation-delay:3s;
+    -webkit-animation-fill-mode:forwards;
+    -moz-animation:fadeOut 1s;
+    -moz-animation-delay:3s;
+    -moz-animation-fill-mode:forwards;
+    animation:fadeOut 1s;
+    animation-delay:3s;
+    animation-fill-mode:forwards;
+}
+.chrome-notification img {
+    width: 66px;
+    height: 25px;
+}
+
+.chrome-notification h2 {
+    font-size: 18px !important;
+    text-align: center;
+    padding-left: 10px;
+    color: #000;
+}
+@-webkit-keyframes fadeOut {
+    from {
+        opacity:1;
+    }
+    to {
+        opacity:0;
+    }
+}
+@-moz-keyframes fadeOut {
+    from {
+        opacity:1;
+    }
+    to {
+        opacity:0;
+    }
+}
+@keyframes fadeOut {
+    from {
+        opacity:1;
+    }
+    to {
+        opacity:0;
+    }
+}

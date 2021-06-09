@@ -1,0 +1,34 @@
+{
+  "name": "QED SessionID",
+  "description": "Get the sessionID cookie from a QED tab.",
+  "version": "1.0",
+  "manifest_version": 2,
+  "permissions": [
+    "cookies",
+    "activeTab",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "web_accessible_resources": ["assets/logo.png"],
+  "icons": {
+    "16": "assets/icon_16.png",
+    "32": "assets/icon_32.png",
+    "48": "assets/icon_48.png",
+    "128": "assets/icon_128.png"
+  },
+  "background": {
+    "persistent": false,
+    "scripts": ["background.js"]
+  },
+  "browser_action": {
+    "name": "Manipulate DOM",
+    "default_icon": {
+      "16": "assets/icon_16.png",
+      "32": "assets/icon_32.png"
+    }
+  },
+  "content_scripts": [ {
+    "css": ["style.css"],
+    "matches": [ "http://*/*", "https://*/*"]
+  }]
+}
