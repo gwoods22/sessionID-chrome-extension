@@ -3,11 +3,15 @@ chrome.browserAction.onClicked.addListener((tab) => {
   let urlString = url.protocol +'//'+ url.host +'/'
   try {
     chrome.cookies.getAll({ 
-      'url': urlString
+      url: urlString,
+      name: 'sessionid'
     }, (cookies) => {
-      let sessionid = cookies.find(x => x.name = 'sessionid');
+      if (cookies.length != 1) {
+        console.log(cookies);
+        throw new Error('Error retrieving cookies: '+cookies.length+' cookies found.')
+      }
       
-      copyTextToClipboard(sessionid.value);
+      copyTextToClipboard(cookies[0].value);
 
       runScript("content.js", tab)
     })
