@@ -1,6 +1,6 @@
 {
-  "name": "QED SessionID",
-  "description": "Get the sessionID cookie from a QED tab.",
+  "name": "SessionID Chrome Extension",
+  "description": "Get the sessionID cookie from a Django tab.",
   "version": "1.0",
   "manifest_version": 2,
   "permissions": [
